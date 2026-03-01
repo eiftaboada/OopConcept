@@ -43,3 +43,19 @@ class Main{
         System.out.println("\nCharacter Selected!");
         player.skill();
 
+        Story story = new StoryBg();
+        story.introduction();
+        story.encounter();
+ 
+        System.out.println("\n--- First Battle ---");
+        Enemy mob = new Mobs("Goblin");
+        mob.encounter();
+ 
+        System.out.println("You attack!");
+        player.skill();
+ 
+        System.out.println("Enemy attacks!");
+        int damage = mob.skill();
+        System.out.println("You received " + damage + " damage!");
+ 
+        mob.defeat();
