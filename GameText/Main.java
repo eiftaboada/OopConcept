@@ -43,22 +43,28 @@ class Main{
         System.out.println("\nCharacter Selected!");
         player.skill();
 
-        Story story = new StoryBg();
-        story.introduction();
-        story.encounter();
- 
-        System.out.println("\n--- First Battle ---");
-        Enemy mob = new Mobs("Goblin");
-        mob.encounter();
- 
-        System.out.println("You attack!");
-        player.skill();
- 
-        System.out.println("Enemy attacks!");
-        int damage = mob.skill();
-        System.out.println("You received " + damage + " damage!");
- 
-        mob.defeat();
+                Story female = new FemaleCharacter("Born of steel and witchcraft, she was forged as a weapon. But a weapon cannot dream... or can it?", 
+                                           "A dark knight stands before you.", 
+                                           "You fall. The world keeps turning. So will you.");
+
+        Story male = new MaleCharacter("From the frozen wastes where his clan was slaughtered, he emerged. Born of vengeance, he is the North's reckoning",
+                                       "A dragon blocks your path.", 
+                                       "Darkness takes you. Dawn will give you back.");
+
+        Story enemy = new EnemyCharacterStory("Born from darkness, the monster seeks chaos.",
+                                              "The enemy challenges the hero.",
+                                              "The enemy fades into shadows.");
+        
+        System.out.print("--- Character Introduction ---\n");
+        female.introduction();
+
+        System.out.print("\n--- Next Character ---\n");
+        male.introduction();
+
+        System.out.print("\n--- Enemy Story ---\n");
+        enemy.introduction();
+        enemy.encounter();
+        enemy.defeat();
 
         System.out.println("\n--- Final Boss ---");
         Enemy boss = new Boss();
@@ -79,3 +85,4 @@ class Main{
 
     }
 }
+
