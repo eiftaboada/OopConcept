@@ -59,3 +59,23 @@ class Main{
         System.out.println("You received " + damage + " damage!");
  
         mob.defeat();
+
+        System.out.println("\n--- Final Boss ---");
+        Enemy boss = new Boss();
+        boss.encounter();
+
+        System.out.println("You use ultimate skill!");
+        player.skill();
+
+        System.out.println("Boss attacks!");
+        int bossDamage = boss.skill();
+        System.out.println("You received " + bossDamage + " damage!");
+
+        boss.defeat();
+
+        story.defeat();
+
+        System.out.println("\n===== GAME OVER =====");
+
+    }
+}
