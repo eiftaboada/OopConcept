@@ -43,7 +43,7 @@ class Main{
         System.out.println("\nCharacter Selected!");
         player.skill();
 
-                Story female = new FemaleCharacter("Born of steel and witchcraft, she was forged as a weapon. But a weapon cannot dream... or can it?", 
+        Story female = new FemaleCharacter("Born of steel and witchcraft, she was forged as a weapon. But a weapon cannot dream... or can it?", 
                                            "A dark knight stands before you.", 
                                            "You fall. The world keeps turning. So will you.");
 
@@ -85,4 +85,5 @@ class Main{
 
     }
 }
+
 
