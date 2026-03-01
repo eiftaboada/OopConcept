@@ -1,8 +1,7 @@
-class Story {
-
-    String introduction;
-    String encounter;
-    String defeat;
+abstract class Story {
+    protected String introduction;
+    protected String encounter;
+    protected String defeat;
 
     public Story(String introduction, String encounter, String defeat) {
         this.introduction = introduction;
@@ -10,63 +9,39 @@ class Story {
         this.defeat = defeat;
     }
 
-    public void Intro() {
-        System.out.print("\n-----INTRODUCTION-----");
+    public void introduction() {
         System.out.println(introduction);
     }
 
-    public void Encounter() {
+    public void encounter() {
         System.out.println(encounter);
     }
 
-    public void Defeat() {
+    public void defeat() {
         System.out.println(defeat);
     }
 }
 
-
-class CharacterStory extends Story {
-    String name;
-    String ability;
-
-    public CharacterStory(String introduction, String encounter, String defeat, String name, String ability) {
+abstract class CharacterBackgroundStory extends Story {
+    public CharacterBackgroundStory(String introduction, String encounter, String defeat) {
         super(introduction, encounter, defeat);
-        this.name = name;
-        this.ability = ability;
-    }
-
-    public void characterInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Ability: " + ability);
     }
 }
 
-
-class FemaleCharacter extends CharacterStory {
-
-    public FemaleCharacter(String introduction, String encounter, String defeat, String name, String ability) {
-        super(introduction, encounter, defeat, name, ability);
-    }
-}
-
-
-class MaleCharacter extends CharacterStory {
-
-    public MaleCharacter(String introduction, String encounter, String defeat, String name, String ability) {
-        super(introduction, encounter, defeat, name, ability);
-    }
-}
-
-
-class EnemyStory extends Story {
-    int strength;
-
-    public EnemyStory(String introduction, String encounter, String defeat, int strength) {
+class FemaleCharacter extends CharacterBackgroundStory {
+    public FemaleCharacter(String introduction, String encounter, String defeat) {
         super(introduction, encounter, defeat);
-        this.strength = strength;
     }
+}
 
-    public void enemyInfo() {
-        System.out.println("Strength: " + strength);
+class MaleCharacter extends CharacterBackgroundStory {
+    public MaleCharacter(String introduction, String encounter, String defeat) {
+        super(introduction, encounter, defeat);
+    }
+}
+
+class EnemyCharacterStory extends Story {
+    public EnemyCharacterStory(String introduction, String encounter, String defeat) {
+        super(introduction, encounter, defeat);
     }
 }
