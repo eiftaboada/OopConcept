@@ -1,9 +1,8 @@
-public interface World {
+interface World {
     public void start();
 }
 
 class Easy implements World {
-
     @Override
     public void start() {
         System.out.println("Welcome to Easy Level");
@@ -11,7 +10,6 @@ class Easy implements World {
 }
 
 class Medium implements World {
-
     @Override
     public void start() {
         System.out.println("Welcome to Medium Level");
@@ -19,7 +17,6 @@ class Medium implements World {
 }
 
 class Hard implements World {
-
     @Override
     public void start() {
         System.out.println("Welcome to Hard Level");
