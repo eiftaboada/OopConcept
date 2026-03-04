@@ -1,4 +1,4 @@
-public abstract class Enemy {
+abstract class Enemy {
     protected String name;
     private int hp;
     private int def;
@@ -21,8 +21,7 @@ public abstract class Enemy {
     }
 }
 
-
-public class Boss extends Enemy {
+class Boss extends Enemy {
     public Boss() {
         super("Boss", 100, 100, 10);
     }
@@ -30,7 +29,7 @@ public class Boss extends Enemy {
     @Override
     public int skill() {
         System.out.println(name + " uses Technology to predict enemy moves.");
-        return getBasicAttack() * 2; // Use getter method
+        return getBasicAttack() * 2;
     }
 
     @Override
@@ -49,8 +48,7 @@ public class Boss extends Enemy {
     }
 }
 
-
-public class Mobs extends Enemy {
+class Mobs extends Enemy {
     public Mobs(String name, int hp, int def) {
         super(name, hp, def, 10);
     }
@@ -58,7 +56,7 @@ public class Mobs extends Enemy {
     @Override
     public int skill() {
         System.out.println(name + " uses basic attack.");
-        return getBasicAttack(); // Use getter method
+        return getBasicAttack();
     }
 
     @Override
