@@ -60,17 +60,26 @@ class Main {
                 "The enemy challenges the hero.",
                 "The enemy fades into shadows."
         );
-
-        System.out.print("--- Female Character Introduction ---\n");
-        femaleStory.introduction();
-
-        System.out.print("\n--- Male Character Introduction ---\n");
-        maleStory.introduction();
-
-        System.out.print("\n--- Enemy Story ---\n");
-        enemyStory.introduction();
-        enemyStory.encounter();
-        enemyStory.defeat();
+                                              
+        System.out.println("Choose a character:");
+        System.out.println("1. Noah");
+        System.out.println("2. Pam");
+        System.out.println("3. About Enemy");
+        int ch = output.nextInt();
+        
+        System.out.println();
+        
+        if(ch == 1) {
+            maleStory.introduction();
+        } else if (ch == 2)  {
+            femaleStory.introduction();
+        } else if (ch == 3) {
+            enemyStory.introduction();
+            enemyStory.encounter();
+            enemyStory.defeat();
+        } else {
+            System.out.print("Choose a character.");
+        }
 
         System.out.println("\n--- Final Boss ---");
         Enemy boss = new Boss();
@@ -90,3 +99,4 @@ class Main {
         output.close();
     }
 }
+
