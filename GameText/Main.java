@@ -1,4 +1,4 @@
-class Main{
+class Main {
 
     public static void main(String[] args) {
 
@@ -6,7 +6,6 @@ class Main{
 
         System.out.println("SIMPLE TEXT RPG");
 
-     
         System.out.println("\nChoose Difficulty:");
         System.out.println("1. Easy");
         System.out.println("2. Medium");
@@ -43,28 +42,35 @@ class Main{
         System.out.println("\nCharacter Selected!");
         player.skill();
 
-        Story female = new FemaleCharacter("Born of steel and witchcraft, she was forged as a weapon. But a weapon cannot dream... or can it?", 
-                                           "A dark knight stands before you.", 
-                                           "You fall. The world keeps turning. So will you.");
+      
+        Story femaleStory = new FemaleCharacterStory(
+                "Born of steel and witchcraft, she was forged as a weapon. But a weapon cannot dream... or can it?",
+                "A dark knight stands before you.",
+                "You fall. The world keeps turning. So will you."
+        );
 
-        Story male = new MaleCharacter("From the frozen wastes where his clan was slaughtered, he emerged. Born of vengeance, he is the North's reckoning",
-                                       "A dragon blocks your path.", 
-                                       "Darkness takes you. Dawn will give you back.");
+        Story maleStory = new MaleCharacterStory(
+                "From the frozen wastes where his clan was slaughtered, he emerged. Born of vengeance, he is the North's reckoning",
+                "A dragon blocks your path.",
+                "Darkness takes you. Dawn will give you back."
+        );
 
-        Story enemy = new EnemyCharacterStory("Born from darkness, the monster seeks chaos.",
-                                              "The enemy challenges the hero.",
-                                              "The enemy fades into shadows.");
-        
-        System.out.print("--- Character Introduction ---\n");
-        female.introduction();
+        Story enemyStory = new EnemyCharacterStory(
+                "Born from darkness, the monster seeks chaos.",
+                "The enemy challenges the hero.",
+                "The enemy fades into shadows."
+        );
 
-        System.out.print("\n--- Next Character ---\n");
-        male.introduction();
+        System.out.print("--- Female Character Introduction ---\n");
+        femaleStory.introduction();
+
+        System.out.print("\n--- Male Character Introduction ---\n");
+        maleStory.introduction();
 
         System.out.print("\n--- Enemy Story ---\n");
-        enemy.introduction();
-        enemy.encounter();
-        enemy.defeat();
+        enemyStory.introduction();
+        enemyStory.encounter();
+        enemyStory.defeat();
 
         System.out.println("\n--- Final Boss ---");
         Enemy boss = new Boss();
@@ -79,11 +85,8 @@ class Main{
 
         boss.defeat();
 
-        story.defeat();
-
         System.out.println("\n===== GAME OVER =====");
 
+        output.close();
     }
 }
-
-
