@@ -34,7 +34,7 @@ public class CharacterStory extends JPanel {
 
         updateText();
 
-        // buttons
+        
         next = createButton("NEXT ▶");
         ready = createButton("READY");
         back = createButton("◀ BACK");
@@ -71,16 +71,16 @@ public class CharacterStory extends JPanel {
 
         if (w <= 0 || h <= 0) return;
 
-        // STORY BOX CENTERED
+        
         storyLabel.setBounds(60, h / 2 - 80, w - 120, 140);
 
-        // BUTTONS POSITIONED RELATIVE TO SCREEN
+       
         next.setBounds(w - 220, h - 80, 140, 40);
         ready.setBounds(80, h - 80, 140, 40);
         back.setBounds(80, 40, 140, 40);
     }
 
-  //stylish sa button
+
     private JButton createButton(String text) {
         JButton btn = new JButton(text);
         btn.setFont(new Font("Monospaced", Font.BOLD, 16));
