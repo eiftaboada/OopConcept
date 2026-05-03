@@ -218,7 +218,7 @@ public class LevelOneFightingScene extends JPanel {
                 getClass().getResource("/images/backgroundIntro.jpg")
         ).getImage();
 
-        // ✅ NEXT LEVEL = 2
+        // next level = 2
         frame.setContentPane(new Store(frame, introBg, selectedCharacter, 2));
         frame.revalidate();
         frame.repaint();
