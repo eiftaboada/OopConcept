@@ -368,22 +368,6 @@ public class Store extends JPanel {
     }
 
     private void goToNextLevel() {
-
-        JPanel nextScene;
-
-        if (nextLevel == 1) {
-            nextScene = new LevelOneFightingScene(frame, selectedCharacter);
-        }
-        else if (nextLevel == 2) {
-            nextScene = new LevelTwoFightingScene(frame, selectedCharacter);
-        }
-        else {
-            JOptionPane.showMessageDialog(this, "More levels coming soon!");
-            return;
-        }
-
-        frame.setContentPane(nextScene);
-        frame.revalidate();
-        frame.repaint();
+        // e implementan pa
     }
 }
