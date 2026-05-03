@@ -121,7 +121,6 @@ public class LevelOneFightingScene extends JPanel {
         enemyHP.setBackground(Color.DARK_GRAY);
         add(enemyHP);
 
-        // designi ninyu tarung button bi gikapooi najud ko ani ahahahahahaah
         bottomUI = new JPanel(null);
         bottomUI.setBackground(new Color(0, 0, 0, 180));
         add(bottomUI);
